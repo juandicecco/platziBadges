@@ -7,7 +7,10 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Badge from "./components/Badge";
+// import Badge from "./components/Badge";
+import BadgeNew from "./pages/BadgeNew";
+import "bootstrap/dist/css/bootstrap.css";
+import "./global.css";
 
 //const element = <h1>Hello, Platzi Badges from React!</h1>; //JSX
 // const element = React.createElement('h1', {}, 'Hola! Soy los children.') Similar a JSX, primero etiqueta, atributos (props) y children
@@ -34,4 +37,15 @@ import Badge from "./components/Badge";
 const container = document.getElementById("app");
 
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(<Badge />, container);
+// ReactDOM.render(
+//   <Badge
+//     firstName="Lilly"
+//     lastName="Kaufman"
+//     jobTitle="Frontend Engineer"
+//     avatarUrl="https://www.gravatar.com/avatar?d=identicon"
+//     twitter="sparragus"
+//   />,
+//   container
+// );
+
+ReactDOM.render(<BadgeNew />, container);
