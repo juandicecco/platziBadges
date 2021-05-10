@@ -8,9 +8,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 // import Badge from "./components/Badge";
-import BadgeNew from "./pages/BadgeNew";
 import "bootstrap/dist/css/bootstrap.css";
 import "./global.css";
+// import BadgeNew from "./pages/BadgeNew";
+// import Badges from "./pages/Badges";
+import App from "./components/App";
 
 //const element = <h1>Hello, Platzi Badges from React!</h1>; //JSX
 // const element = React.createElement('h1', {}, 'Hola! Soy los children.') Similar a JSX, primero etiqueta, atributos (props) y children
@@ -48,4 +50,4 @@ const container = document.getElementById("app");
 //   container
 // );
 
-ReactDOM.render(<BadgeNew />, container);
+ReactDOM.render(<App />, container);
