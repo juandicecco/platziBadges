@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./styles/BadgesList.css";
 import tw_logo from "../images/twitter-logo.png";
+import Gravatar from "./Gravatar";
 
 export default class BadgesList extends Component {
   render() {
@@ -15,6 +16,7 @@ export default class BadgesList extends Component {
         </div>
       );
     }
+
     return (
       <ul className="list-unstyled">
         {this.props.badges.map((badge) => {
@@ -23,14 +25,15 @@ export default class BadgesList extends Component {
               <div className="container">
                 <div className="row">
                   <div className="col-3">
-                    <img
-                      src={badge.avatarUrl}
-                      alt=""
+                    <Gravatar
+                      email={badge.email}
+                      alt="Avatar"
                       className="Badge__avatar-list"
                     />
                   </div>
                   <div className="col">
                     <div className="row">
+                      <Link to={`/badges/${badge.id}/edit`}></Link>
                       <strong>
                         {badge.firstName} {badge.lastName}
                       </strong>

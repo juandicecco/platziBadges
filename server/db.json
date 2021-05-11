@@ -440,6 +440,30 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
+    },
+    {
+      "firstName": "Juan",
+      "lastName": "DC.",
+      "email": "juandicecco@gmail.com",
+      "jobTitle": "Front End",
+      "twitter": "juandicecco",
+      "id": "eZLKx93"
+    },
+    {
+      "firstName": "Juan Antonio",
+      "lastName": "Di Cecco",
+      "email": "diceccojuan@gmail.com",
+      "jobTitle": "Fullstack Dev",
+      "twitter": "mrboss",
+      "id": "CnghF_L"
+    },
+    {
+      "firstName": "Renzo",
+      "lastName": "Di Cecco",
+      "email": "renzodicecco@gmail.com",
+      "jobTitle": "Lawyer",
+      "twitter": "renzodicecco",
+      "id": "RL_teka"
     }
   ]
 }

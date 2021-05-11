@@ -17,11 +17,11 @@ export default class BadgeForm extends Component {
     console.log("Button was clicked");
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form was submitted");
-    console.log(this.state);
-  };
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form was submitted");
+  //   console.log(this.state);
+  // };
 
   //Ajustar nuestros inputs y convertirlos de no controlados a controlados con this.state. (para no tener doble almacenamiento de datos, el del componente y el del setState)
   render() {
@@ -29,7 +29,7 @@ export default class BadgeForm extends Component {
       <div>
         <h1>New Attendant</h1>
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
             <input
@@ -92,6 +92,10 @@ export default class BadgeForm extends Component {
           >
             Save
           </button>
+
+          {this.props.error && (
+            <p className="text-danger">{this.props.error.message}</p>
+          )}
         </form>
       </div>
     );
