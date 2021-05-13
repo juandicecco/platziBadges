@@ -7,6 +7,7 @@ import BadgesList from "../components/BadgesList";
 import api from "../api";
 import PageLoading from "../components/PageLoading";
 import PageError from "../components/PageError";
+import MiniLoader from "../components/MiniLoader";
 
 export default class Badges extends Component {
   constructor(props) {
@@ -31,6 +32,8 @@ export default class Badges extends Component {
     // });
 
     this.fetchData();
+
+    this.intervalId = setInterval(this.fetchData, 5000); //Polling
   }
 
   fetchData = async () => {
@@ -61,10 +64,13 @@ export default class Badges extends Component {
     console.log("6. componentWillUnmount");
 
     clearTimeout(this.timeoutId); //cancela trabajo pendiente
+
+    clearInterval(this.intervalId);
   }
 
   render() {
-    if (this.state.loading === true) {
+    if (this.state.loading === true && !this.state.data) {
+      //Polling &&
       return <PageLoading />;
     }
 
@@ -98,6 +104,7 @@ export default class Badges extends Component {
             <div className="Badges__list">
               <div className="Badges__container">
                 <BadgesList badges={this.state.data} />
+                {this.state.loading && <MiniLoader />}
               </div>
             </div>
           </div>
